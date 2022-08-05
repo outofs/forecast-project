@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- =================================CSS================================= -->
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <!-- =================================FONTS================================= -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <!-- =================================ICONS================================= -->
+    <title>Forecast App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="current__info">
+        <div class="current__date__container">
+          <div class="current__time" id="time">
+            12:30 <span id="am-pm">PM</span>
+          </div>
+          <div class="current__date" id="date">Monday, 24 May</div>
+        </div>
+
+        <div class="current__others" id="current__weather__items">
+          <div class="weather__item">
+            <div>Humidity</div>
+            <div>95.5%</div>
+          </div>
+          <div class="weather__item">
+            <div>Pressure</div>
+            <div>120</div>
+          </div>
+          <div class="weather__item">
+            <div>Wind Speed</div>
+            <div>95.5%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="place__container">
+        <div class="time__zone" id="time__zone">Europe/Kyiv</div>
+        <div class="country" id="country">UA</div>
+      </div>
+    </div>
+
+    <div class="future__forecast">
+      <div class="today" id="current__temp">
+        <img src="" alt="weather icon" class="w__icon" />
+        <div class="day">Monday</div>
+        <div class="temp">Night - 21.6&#176;C</div>
+        <div class="temp">Day- 32.2&#176;C</div>
+      </div>
+      <div class="weather__forecast" id="weather__forecast">
+        <div class="weather__forecast__item">
+          <div class="day">Monday</div>
+          <img src="" alt="weather icon" class="w__icon" />
+          <div class="temp">Night - 21.6&#176;C</div>
+          <div class="temp">Day- 32.2&#176;C</div>
+        </div>
+        <div class="weather__forecast__item">
+          <div class="day">Monday</div>
+          <img src="" alt="weather icon" class="w__icon" />
+          <div class="temp">Night - 21.6&#176;C</div>
+          <div class="temp">Day- 32.2&#176;C</div>
+        </div>
+        <div class="weather__forecast__item">
+          <div class="day">Monday</div>
+          <img src="" alt="weather icon" class="w__icon" />
+          <div class="temp">Night - 21.6&#176;C</div>
+          <div class="temp">Day- 32.2&#176;C</div>
+        </div>
+        <div class="weather__forecast__item">
+          <div class="day">Monday</div>
+          <img src="" alt="weather icon" class="w__icon" />
+          <div class="temp">Night - 21.6&#176;C</div>
+          <div class="temp">Day- 32.2&#176;C</div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- =================================SCRIPT================================= -->
+  <script defer src="./src/js/script.js"></script>
+</html>
