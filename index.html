@@ -10,7 +10,7 @@
 
     <!-- =================================FONTS================================= -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap"
       rel="stylesheet"
     />
     <!-- =================================ICONS================================= -->
@@ -20,70 +20,81 @@
     <div class="container">
       <div class="current__info">
         <div class="current__date__container">
-          <div class="current__time" id="time">
-            12:30 <span id="am-pm">PM</span>
-          </div>
+          <div class="current__time" id="time"></div>
           <div class="current__date" id="date">Monday, 24 May</div>
+          <div class="current__others" id="current__weather__items"></div>
         </div>
 
-        <div class="current__others" id="current__weather__items">
-          <div class="weather__item">
-            <div>Humidity</div>
-            <div>95.5%</div>
-          </div>
-          <div class="weather__item">
-            <div>Pressure</div>
-            <div>120</div>
-          </div>
-          <div class="weather__item">
-            <div>Wind Speed</div>
-            <div>95.5%</div>
-          </div>
+        <div class="place__container">
+          <div class="time__zone" id="time__zone">Europe/Kyiv</div>
+          <div class="country" id="country">UA</div>
         </div>
-      </div>
-
-      <div class="place__container">
-        <div class="time__zone" id="time__zone">Europe/Kyiv</div>
-        <div class="country" id="country">UA</div>
       </div>
     </div>
-
     <div class="future__forecast">
       <div class="today" id="current__temp">
-        <img src="" alt="weather icon" class="w__icon" />
-        <div class="day">Monday</div>
-        <div class="temp">Night - 21.6&#176;C</div>
-        <div class="temp">Day- 32.2&#176;C</div>
+        <img
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          alt="weather icon"
+          class="w__icon"
+        />
+        <div class="other">
+          <div class="day">Monday</div>
+          <div class="temp">Night - 21.6&#176;C</div>
+          <div class="temp">Day - 32.2&#176;C</div>
+        </div>
       </div>
       <div class="weather__forecast" id="weather__forecast">
         <div class="weather__forecast__item">
           <div class="day">Monday</div>
-          <img src="" alt="weather icon" class="w__icon" />
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather icon"
+            class="w__icon"
+          />
           <div class="temp">Night - 21.6&#176;C</div>
-          <div class="temp">Day- 32.2&#176;C</div>
+          <div class="temp">Day - 32.2&#176;C</div>
         </div>
         <div class="weather__forecast__item">
           <div class="day">Monday</div>
-          <img src="" alt="weather icon" class="w__icon" />
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather icon"
+            class="w__icon"
+          />
           <div class="temp">Night - 21.6&#176;C</div>
-          <div class="temp">Day- 32.2&#176;C</div>
+          <div class="temp">Day - 32.2&#176;C</div>
         </div>
         <div class="weather__forecast__item">
           <div class="day">Monday</div>
-          <img src="" alt="weather icon" class="w__icon" />
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather icon"
+            class="w__icon"
+          />
           <div class="temp">Night - 21.6&#176;C</div>
-          <div class="temp">Day- 32.2&#176;C</div>
+          <div class="temp">Day - 32.2&#176;C</div>
         </div>
         <div class="weather__forecast__item">
           <div class="day">Monday</div>
-          <img src="" alt="weather icon" class="w__icon" />
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather icon"
+            class="w__icon"
+          />
           <div class="temp">Night - 21.6&#176;C</div>
-          <div class="temp">Day- 32.2&#176;C</div>
+          <div class="temp">Day - 32.2&#176;C</div>
         </div>
       </div>
     </div>
   </body>
 
   <!-- =================================SCRIPT================================= -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
+    integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
   <script defer src="./src/js/script.js"></script>
 </html>
