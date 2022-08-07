@@ -13,15 +13,30 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap"
       rel="stylesheet"
     />
+
     <!-- =================================ICONS================================= -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <title>Forecast App</title>
   </head>
   <body>
     <div class="container">
+      <div class="current__date__container">
+        <div class="current__time" id="time"></div>
+        <div class="current__date" id="date">Monday, 24 May</div>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search" class="search__bar" />
+        <button class="search__button">
+          <i class="uil uil-search search__icon"></i>
+        </button>
+      </div>
       <div class="current__info">
-        <div class="current__date__container">
-          <div class="current__time" id="time"></div>
-          <div class="current__date" id="date">Monday, 24 May</div>
+        <div class="current__weather__container">
+          <div class="title">Weather in Kiev</div>
+          <div class="today" id="current__temp"></div>
           <div class="current__others" id="current__weather__items"></div>
         </div>
 
@@ -32,20 +47,8 @@
       </div>
     </div>
     <div class="future__forecast">
-      <div class="today" id="current__temp">
-        <img
-          src="http://openweathermap.org/img/wn/10d@2x.png"
-          alt="weather icon"
-          class="w__icon"
-        />
-        <div class="other">
-          <div class="day">Monday</div>
-          <div class="temp">Night - 21.6&#176;C</div>
-          <div class="temp">Day - 32.2&#176;C</div>
-        </div>
-      </div>
       <div class="weather__forecast" id="weather__forecast">
-        <div class="weather__forecast__item">
+        <!-- <div class="weather__forecast__item">
           <div class="day">Monday</div>
           <img
             src="http://openweathermap.org/img/wn/10d@2x.png"
@@ -84,17 +87,18 @@
           />
           <div class="temp">Night - 21.6&#176;C</div>
           <div class="temp">Day - 32.2&#176;C</div>
-        </div>
+        </div> -->
       </div>
     </div>
   </body>
 
   <!-- =================================SCRIPT================================= -->
   <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
-    integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA=="
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
-  <script defer src="./src/js/script.js"></script>
+
+  <script defer type="module" src="./src/js/script.js"></script>
 </html>

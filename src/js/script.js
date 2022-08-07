@@ -1,131 +1,65 @@
-const timeEl = document.querySelector(".current__time");
-const dateEl = document.querySelector(".current__date");
-const currentWeatherItrmsEl = document.querySelector(".current__others");
-const timezone = document.querySelector(".time__zone");
-const countryEl = document.querySelector(".country");
-const weatherForecastEl = document.querySelector(".weather__forecast");
-const currentTempEl = document.querySelector("today");
+import * as Config from "./config.js";
+import { renderTimeAndDate } from "./renderTimAndDate.js";
+import { renderCurrentWeatherItems } from "./renderCurrentWeatherItems.js";
+import { renderOtherDayForecast } from "./renderOtherDayForecast.js";
+import { renderTitle } from "./renderTitle.js";
 
-const dayNames = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunay",
-];
+const searchButton = document.querySelector(".search__button");
+const searchBar = document.querySelector(".search__bar");
 
-const monthNames = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+const renderData = function (url) {
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      renderCurrentWeatherItems(data);
+      renderOtherDayForecast(data);
+    });
+};
 
-const apiKey = "04e734ee28bd68f1eb6b913bd39bff07";
+const renderCityName = function (url, renderTitle) {
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => renderTitle(data[0]));
+};
+
+const searchingFunction = function () {
+  fetch(
+    `http://api.openweathermap.org/geo/1.0/direct?q=${searchBar.value}&limit=5&appid=${Config.KEY}`
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      const { lat, lon } = data[0];
+      renderTitle(data[0]);
+      const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=metric&appid=${Config.KEY}`;
+      renderData(url);
+    });
+};
+
+const getWeatherData = function () {
+  navigator.geolocation.getCurrentPosition((success) => {
+    const { latitude, longitude } = success.coords;
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${Config.KEY}`;
+    const locationUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=5&appid=${Config.KEY}`;
+    renderCityName(locationUrl, renderTitle);
+    renderData(weatherUrl);
+  });
+};
 
 setInterval(() => {
   const time = new Date();
-  const hours = time.getHours() < 10 ? `0${time.getHours()}` : time.getHours();
-  const minutes =
-    time.getMinutes() < 10 ? `0${time.getMinutes()}` : time.getMinutes();
-  const day = time.getDay() - 1;
-  const month = time.getMonth();
-  const date = time.getDate();
-  console.log(date);
-
-  timeEl.innerHTML = `${hours} : ${minutes}`;
-  dateEl.innerHTML = `${dayNames[day]}, ${monthNames[month]} ${date}`;
+  renderTimeAndDate(time);
 }, 1000);
 
-function getWeatherData() {
-  navigator.geolocation.getCurrentPosition((success) => {
-    const { latitude, longitude } = success.coords;
-
-    fetch(
-      `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${apiKey}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        showWeatherData(data);
-      });
-  });
-}
-
-const showWeatherData = function (data) {
-  const { humidity, pressure, sunrise, sunset, windSpeed } = data.current;
-
-  timezone.innerHTML = data.timezone;
-  countryEl.innerHTML = `${data.lat}N + ${day.lon}E`;
-  currentWeatherItrmsEl.innerHTML = `
-  
-            <div class="weather__item">
-              <div>Humidity</div>
-              <div>${humidity}%</div>
-            </div>
-            <div class="weather__item">
-              <div>Pressure</div>
-              <div>${pressure}</div>
-            </div>
-            <div class="weather__item">
-              <div>Wind Speed</div>
-              <div>${windSpeed}</div>
-            </div>
-            <div class="weather__item">
-              <div>Sunrise</div>
-              <div>${window.moment(sunrise * 1000).format("HH:mm")}</div>
-            </div>
-            <div class="weather__item">
-              <div>Sunset</div>
-              <div>${window.moment(sunset * 1000).format("HH:mm")}</div>
-            </div>
-          </div>
-  `;
-
-  let otherDayForecast = "";
-  data.daily.forEach((day, index) => {
-    if (index === 0) {
-      currentTempEl.innerHTML = `
-        <div class="today" id="current__temp">
-        <img
-          src="http://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png"
-          alt="weather icon"
-          class="w__icon"
-        />
-        <div class="other">
-          <div class="day">Monday</div>
-          <div class="temp">Night - ${day.temp.night}&#176;C</div>
-          <div class="temp">Day - ${day.temp.day}&#176;C</div>
-        </div>
-      </div>
-        `;
-    } else {
-      otherDayForecast += `
-        <div class="weather__forecast__item">
-          <div class="day">${window.moment(day.dt * 1000).format("ddd")}</div>
-          <img
-            src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"
-            alt="weather icon"
-            class="w__icon"
-          />
-          <div class="temp">Night - ${day.temp.night}&#176;C</div>
-          <div class="temp">Day - ${day.temp.day}&#176;C</div>
-        </div>
-    `;
-    }
-  });
-
-  weatherForecastEl.insertAdjacentHTML("afterbegin", otherDayForecast);
-};
-
 getWeatherData();
+
+searchButton.addEventListener("click", function (e) {
+  searchingFunction();
+});
+
+// document.addEventListener("keydown", function (e) {
+//   e.preventDefault();
+//   if (e.key === "Enter") {
+//     searchingFunction();
+//   }
+// });
