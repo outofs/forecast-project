@@ -541,7 +541,6 @@ const searchButton = document.querySelector(".search__button");
 const searchBar = document.querySelector(".search__bar");
 const renderData = function(url) {
     fetch(url).then((res)=>res.json()).then((data)=>{
-        console.log(data);
         (0, _renderCurrentWeatherItemsJs.renderCurrentWeatherItems)(data);
         (0, _renderOtherDayForecastJs.renderOtherDayForecast)(data);
     });

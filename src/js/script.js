@@ -11,7 +11,6 @@ const renderData = function (url) {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       renderCurrentWeatherItems(data);
       renderOtherDayForecast(data);
     });

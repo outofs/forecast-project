@@ -1,10 +1,11 @@
-7417
+7418
 54E:\H\JS\forecast-project\node_modules\clone\.npmignore133044442355736765 0
 76E:\H\JS\forecast-project\node_modules\dom-serializer\lib\esm\foreignNames.js133044442356255379 0
 84E:\H\JS\forecast-project\node_modules\@parcel\hash\parcel-hash.linux-arm64-musl.node133044442399859995 0
 83E:\H\JS\forecast-project\node_modules\@parcel\packager-js\lib\GlobalOutputFormat.js133044442382899709 0
 77E:\H\JS\forecast-project\node_modules\htmlparser2\lib\WritableStream.d.ts.map133044442377353487 0
 37E:\H\JS\forecast-project\package.json133044442492134733 0
+35E:\H\JS\forecast-project\.gitignore133044446120586425 0
 65E:\H\JS\forecast-project\node_modules\core-js\full\regexp\test.js133044339476305457 0
 66E:\H\JS\forecast-project\node_modules\source-map\lib\quick-sort.js133044442373723127 0
 60E:\H\JS\forecast-project\node_modules\react-refresh\babel.js133044442355686895 0
@@ -18,7 +19,7 @@
 56E:\H\JS\forecast-project\node_modules\json5\lib\parse.js133044442368561254 0
 62E:\H\JS\forecast-project\node_modules\dom-serializer\README.md133044442377533000 0
 89E:\H\JS\forecast-project\node_modules\core-js\modules\es.object.get-own-property-names.js133044339432143996 0
-29E:\H\JS\forecast-project\dist133044444802590801 1
+29E:\H\JS\forecast-project\dist133044451519301676 1
 76E:\H\JS\forecast-project\node_modules\core-js\stable\string\code-point-at.js133044339424579962 0
 57E:\H\JS\forecast-project\node_modules\dotenv\package.json133044442354071485 0
 88E:\H\JS\forecast-project\node_modules\@parcel\source-map\parcel_sourcemap_node\artifacts133044442412815473 1
@@ -48,10 +49,6 @@
 37E:\H\JS\forecast-project\node_modules133044442485109414 1
 75E:\H\JS\forecast-project\node_modules\core-js\internals\get-substitution.js133044339448498152 0
 73E:\H\JS\forecast-project\node_modules\htmlnano\lib\modules\mergeStyles.js133044442380350521 0
-71E:\H\JS\forecast-project\node_modules\@parcel\core\src\applyRuntimes.js133044442399840088 0
-69E:\H\JS\forecast-project\node_modules\@parcel\node-resolver-core\test133044442412566142 1
-63E:\H\JS\forecast-project\node_modules\svgo\plugins\sortAttrs.js133044442409873040 0
-41E:\H\JS\forecast-project\src\js\config.js133043584974445073 0
 42E:\H\JS\forecast-project\node_modules\csso133044442405918707 1
 66E:\H\JS\forecast-project\node_modules\core-js\full\string\index.js133044339453924331 0
 70E:\H\JS\forecast-project\node_modules\core-js\full\observable\index.js133044339453844548 0
@@ -81,6 +78,10 @@
 68E:\H\JS\forecast-project\node_modules\@parcel\node-resolver-core\lib133044442410441826 1
 77E:\H\JS\forecast-project\node_modules\core-js\stable\function\virtual\bind.js133044339423103905 0
 32E:\H\JS\forecast-project\src\css133042027271233514 1
+71E:\H\JS\forecast-project\node_modules\@parcel\core\src\applyRuntimes.js133044442399840088 0
+69E:\H\JS\forecast-project\node_modules\@parcel\node-resolver-core\test133044442412566142 1
+63E:\H\JS\forecast-project\node_modules\svgo\plugins\sortAttrs.js133044442409873040 0
+41E:\H\JS\forecast-project\src\js\config.js133043584974445073 0
 74E:\H\JS\forecast-project\node_modules\core-js\stable\array-buffer\index.js133044339454073930 0
 58E:\H\JS\forecast-project\node_modules\posthtml-parser\dist133044442372153441 1
 60E:\H\JS\forecast-project\src\js\renderCurrentWeatherItems.js133043819381139316 0
@@ -132,7 +133,7 @@
 64E:\H\JS\forecast-project\node_modules\css-tree\lib\syntax\atrule133044442420296815 1
 62E:\H\JS\forecast-project\node_modules\terser\dist\package.json133044442407653910 0
 116E:\H\JS\forecast-project\node_modules\@parcel\core\test\fixtures\plugins\node_modules\parcel-transformer-bad-engines133044442428700551 1
-41E:\H\JS\forecast-project\src\js\script.js133044341458421048 0
+41E:\H\JS\forecast-project\src\js\script.js133044451513445051 0
 76E:\H\JS\forecast-project\node_modules\caniuse-lite\data\features\template.js133044442449206798 0
 74E:\H\JS\forecast-project\node_modules\core-js\features\string\match-all.js133044339461621689 0
 42E:\H\JS\forecast-project\node_modules\@swc133044442346807339 1
@@ -184,13 +185,13 @@
 72E:\H\JS\forecast-project\node_modules\core-js\full\typed-array\reduce.js133044339467236677 0
 46E:\H\JS\forecast-project\node_modules\domutils133044442383079228 1
 70E:\H\JS\forecast-project\node_modules\type-fest\source\promisable.d.ts133044442393473657 0
-75E:\H\JS\forecast-project\node_modules\core-js\features\array\virtual\map.js133044339461142968 0
-83E:\H\JS\forecast-project\node_modules\caniuse-lite\data\features\async-functions.js133044442398356165 0
-48E:\H\JS\forecast-project\node_modules\semver\bin133044442355736765 1
+45E:\H\JS\forecast-project\node_modules\@parcel133044442491286956 1
 120E:\H\JS\forecast-project\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-alias-exclude\main.js133044442407364688 0
 117E:\H\JS\forecast-project\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-browser\browser.js133044442383858028 0
 86E:\H\JS\forecast-project\node_modules\htmlnano\lib\modules\normalizeAttributeValues.js133044442387069439 0
-45E:\H\JS\forecast-project\node_modules\@parcel133044442491286956 1
+75E:\H\JS\forecast-project\node_modules\core-js\features\array\virtual\map.js133044339461142968 0
+83E:\H\JS\forecast-project\node_modules\caniuse-lite\data\features\async-functions.js133044442398356165 0
+48E:\H\JS\forecast-project\node_modules\semver\bin133044442355736765 1
 62E:\H\JS\forecast-project\node_modules\terser\tools\terser.d.ts133044442409344465 0
 78E:\H\JS\forecast-project\node_modules\yaml\browser\dist\resolveSeq-492ab440.js133044442394381229 0
 72E:\H\JS\forecast-project\node_modules\core-js\stable\typed-array\find.js133044339443381314 0
@@ -1196,7 +1197,7 @@
 75E:\H\JS\forecast-project\node_modules\@parcel\runtime-react-refresh\LICENSE133044442369558589 0
 76E:\H\JS\forecast-project\node_modules\type-fest\source\conditional-keys.d.ts133044442374458850 0
 71E:\H\JS\forecast-project\node_modules\type-fest\source\stringified.d.ts133044442397717873 0
-47E:\H\JS\forecast-project\dist\index.e82f28a0.js133044442617013765 0
+47E:\H\JS\forecast-project\dist\index.e82f28a0.js133044451519301676 0
 67E:\H\JS\forecast-project\node_modules\type-fest\source\entries.d.ts133044442377792311 0
 65E:\H\JS\forecast-project\node_modules\type-fest\source\merge.d.ts133044442387039530 0
 81E:\H\JS\forecast-project\node_modules\core-js\stable\object\prevent-extensions.js133044339465541196 0
@@ -1245,8 +1246,8 @@
 78E:\H\JS\forecast-project\node_modules\core-js\modules\esnext.set.delete-all.js133044339437502164 0
 68E:\H\JS\forecast-project\node_modules\core-js\modules\es.weak-map.js133044339434876681 0
 70E:\H\JS\forecast-project\node_modules\core-js\full\instance\entries.js133044339429686307 0
-67E:\H\JS\forecast-project\node_modules\regenerator-runtime\README.md133044339186528914 0
 81E:\H\JS\forecast-project\node_modules\type-fest\source\union-to-intersection.d.ts133044442398695263 0
+67E:\H\JS\forecast-project\node_modules\regenerator-runtime\README.md133044339186528914 0
 66E:\H\JS\forecast-project\node_modules\nth-check\lib\compile.js.map133044442376655341 0
 69E:\H\JS\forecast-project\node_modules\caniuse-lite\data\regions\WS.js133044442452577544 0
 83E:\H\JS\forecast-project\node_modules\core-js\modules\es.object.set-prototype-of.js133044339432393336 0
@@ -2732,8 +2733,8 @@
 54E:\H\JS\forecast-project\node_modules\dotenv\config.js133044442357592711 0
 71E:\H\JS\forecast-project\node_modules\core-js\full\error\constructor.js133044339426205610 0
 48E:\H\JS\forecast-project\node_modules\dotenv\lib133044442370582917 1
-76E:\H\JS\forecast-project\node_modules\core-js\modules\es.string.ends-with.js133044339433231082 0
 66E:\H\JS\forecast-project\node_modules\core-js\es\string\replace.js133044339468732662 0
+76E:\H\JS\forecast-project\node_modules\core-js\modules\es.string.ends-with.js133044339433231082 0
 72E:\H\JS\forecast-project\node_modules\dom-serializer\lib\foreignNames.js133044442360352954 0
 52E:\H\JS\forecast-project\node_modules\dotenv\LICENSE133044442360589998 0
 54E:\H\JS\forecast-project\node_modules\dotenv\README.md133044442363659486 0
@@ -4010,7 +4011,7 @@
 76E:\H\JS\forecast-project\node_modules\core-js\modules\es.typed-array.join.js133044339434507688 0
 85E:\H\JS\forecast-project\node_modules\core-js\modules\es.typed-array.last-index-of.js133044339434527616 0
 67E:\H\JS\forecast-project\node_modules\core-js\full\number\is-nan.js133044339456287177 0
-51E:\H\JS\forecast-project\dist\index.e82f28a0.js.map133044442617169985 0
+51E:\H\JS\forecast-project\dist\index.e82f28a0.js.map133044451519301676 0
 75E:\H\JS\forecast-project\node_modules\core-js\modules\es.typed-array.map.js133044339434537593 0
 74E:\H\JS\forecast-project\node_modules\core-js\full\map\update-or-insert.js133044339482533542 0
 74E:\H\JS\forecast-project\node_modules\core-js\modules\es.typed-array.of.js133044339434557535 0
