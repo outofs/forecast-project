@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 body {
@@ -13,9 +13,33 @@ body {
 }
 
 .container {
+  display: grid;
   padding: 20px 70px;
   color: #fff;
   background-color: rgba(31, 31, 31, 0.6);
+  row-gap: 60px;
+}
+
+.date__search__place__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.current__date__container {
+  display: flex;
+  flex-direction: column;
+  font-weight: 100;
+  justify-content: flex-start;
+}
+
+.current__time {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.current__date {
+  font-size: 20px;
 }
 
 .search {
@@ -32,12 +56,13 @@ body {
   margin: 0.7rem;
   background-color: rgba(32, 32, 32, 0.8);
   color: white;
+  border: solid 1px #fff;
 }
 
 .search__button {
   margin: 0.2rem;
   padding: 0.4rem;
-  border-radius: 50%;
+  border-radius: 25px;
   outline: none;
   font-size: 1rem;
   background-color: rgba(32, 32, 32, 0.8);
@@ -50,31 +75,43 @@ body {
   cursor: pointer;
 }
 
+.place__container {
+  text-align: end;
+  justify-self: flex-end;
+}
+
+.time__zone {
+  font-size: 10px;
+  font-weight: 100;
+}
+
+.country {
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .current__info {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  justify-content: space-around;
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
 }
 
-.current__date__container {
-  display: flex;
-  flex-direction: column;
-  font-weight: 100;
-  justify-content: center;
+.current__weather__container {
+  display: grid;
+  row-gap: 30px;
 }
 
-.current__time {
-  font-size: 70px;
-  font-weight: 100;
+.title {
+  text-align: center;
+  font-weight: 200;
+  font-size: 40px;
 }
 
-#am-pm {
-  font-size: 30px;
-  margin-left: 20px;
-}
-
-.current__date {
-  font-size: 30px;
+.current__weather__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
 }
 
 .current__others {
@@ -92,22 +129,8 @@ body {
   justify-content: space-between;
 }
 
-.place__container {
-  text-align: end;
-}
-
-.time__zone {
-  font-size: 10px;
-  font-weight: 100;
-}
-
-.country {
-  font-size: 12px;
-  font-weight: 700;
-}
-
 .future__forecast {
-  background-color: rgba(31, 31, 31, 0.8);
+  background-color: rgba(31, 31, 31, 0.6);
   padding: 25px;
   position: fixed;
   bottom: 0;
@@ -170,9 +193,90 @@ body {
 }
 
 /* ============================MEDIAQUERIES============================ */
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 450px) {
+  .container {
+    row-gap: 30px;
+  }
   .future__forecast .today .temp {
     font-size: 20px;
+  }
+
+  .date__search__place__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    justify-content: start;
+  }
+  .current__date__container {
+    display: none;
+  }
+
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .place__container {
+    display: none;
+  }
+
+  .current__weather__container {
+    display: grid;
+    row-gap: 10px;
+  }
+
+  .current__weather__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 50px;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: 200;
+    font-size: 20px;
+  }
+  .today .w__icon {
+    width: 35%;
+  }
+
+  .today .other .day {
+    font-size: 10px;
+  }
+
+  .today .other .temp {
+    font-size: 15px;
+  }
+  .today {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .weather__forecast__item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .current__weather__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 50px;
+  }
+
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .date__search__place__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    justify-items: center;
   }
 }
 
@@ -185,11 +289,6 @@ body {
     justify-content: start;
     overflow-y: scroll;
     padding: 15px;
-  }
-
-  .today {
-    border: 1px solid #fff;
-    border-radius: 10px;
   }
 
   .today .temp {
@@ -218,5 +317,13 @@ body {
     justify-content: start;
     align-items: none;
     overflow-x: scroll;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .weather__item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
   }
 }

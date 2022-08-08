@@ -11,6 +11,6 @@ export const renderTimeAndDate = function (time) {
   const month = time.getMonth();
   const date = time.getDate();
 
-  timeEl.innerHTML = `${hours} : ${minutes}`;
+  timeEl.innerHTML = `${hours}:${minutes}`;
   dateEl.innerHTML = `${Config.dayNames[day]}, ${Config.monthNames[month]} ${date}`;
 };

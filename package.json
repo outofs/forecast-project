@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "core-js": "^3.24.1",
+    "parcel": "^2.7.0",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "name": "forecast-project",
+  "version": "1.0.0",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://outofs@github.com/outofs/forecast-project.git"
+  },
+  "author": "Olexandr Hirych",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/outofs/forecast-project/issues"
+  },
+  "homepage": "https://github.com/outofs/forecast-project#readme",
+  "description": ""
+}

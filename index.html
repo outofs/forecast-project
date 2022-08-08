@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://png.pngtree.com/png-vector/20190719/ourlarge/pngtree-cloud-icon-png-image_1558213.jpg"
+    />
 
     <!-- =================================CSS================================= -->
     <link rel="stylesheet" href="./src/css/style.css" />
 
     <!-- =================================FONTS================================= -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -23,29 +27,41 @@
   </head>
   <body>
     <div class="container">
-      <div class="current__date__container">
-        <div class="current__time" id="time"></div>
-        <div class="current__date" id="date">Monday, 24 May</div>
-      </div>
-      <div class="search">
-        <input type="text" placeholder="Search" class="search__bar" />
-        <button class="search__button">
-          <i class="uil uil-search search__icon"></i>
-        </button>
-      </div>
-      <div class="current__info">
-        <div class="current__weather__container">
-          <div class="title">Weather in Kiev</div>
-          <div class="today" id="current__temp"></div>
-          <div class="current__others" id="current__weather__items"></div>
+      <div class="date__search__place__container">
+        <!-- =================================TIME AND DATE CONTAINER================================= -->
+        <div class="current__date__container">
+          <div class="current__time" id="time"></div>
+          <div class="current__date" id="date"></div>
         </div>
 
+        <!-- =================================SEARCH BLOCK================================= -->
+        <div class="search">
+          <input type="text" placeholder="Search" class="search__bar" />
+          <button class="search__button">
+            <i class="uil uil-search search__icon"></i>
+          </button>
+        </div>
+
+        <!-- =================================PLACE BLOCK================================= -->
         <div class="place__container">
-          <div class="time__zone" id="time__zone">Europe/Kyiv</div>
-          <div class="country" id="country">UA</div>
+          <div class="time__zone" id="time__zone"></div>
+          <div class="country" id="country"></div>
+        </div>
+      </div>
+
+      <!-- =================================CURRENT WEATHER INFORMATION================================= -->
+      <div class="current__info">
+        <div class="current__weather__container">
+          <div class="title"></div>
+          <div class="current__weather__info">
+            <div class="today" id="current__temp"></div>
+            <div class="current__others" id="current__weather__items"></div>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- =================================FUTURE WEATHER INFORMATION================================= -->
     <div class="future__forecast">
       <div class="weather__forecast" id="weather__forecast">
         <!-- <div class="weather__forecast__item">
