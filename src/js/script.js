@@ -39,7 +39,7 @@ const getWeatherData = function () {
   navigator.geolocation.getCurrentPosition((success) => {
     const { latitude, longitude } = success.coords;
     const weatherUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${Config.KEY}`;
-    const locationUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=5&appid=${Config.KEY}`;
+    const locationUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=5&appid=${Config.KEY2}`;
     renderCityName(locationUrl, renderTitle);
     renderData(weatherUrl);
   });

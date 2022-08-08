@@ -203,16 +203,16 @@ body {
 
   .date__search__place__container {
     display: grid;
+    /* width: 100%; */
     grid-template-columns: 1fr;
-    width: 100%;
-    justify-content: start;
   }
   .current__date__container {
     display: none;
   }
 
   .search {
-    display: flex;
+    display: grid;
+    grid-template-columns: max-content;
     justify-content: center;
     align-items: center;
   }
@@ -335,7 +335,7 @@ body {
 
   .weather__item {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 
@@ -371,7 +371,27 @@ body {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 731px) and (max-height: 600px) {
+  .container {
+    row-gap: 10px;
+    padding: 50;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: 200;
+    font-size: 20px;
+  }
+  .today .w__icon {
+    width: 50%;
+  }
+
+  .future__forecast {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 1053px) {
   .future__forecast {
     justify-content: start;
     align-items: none;
